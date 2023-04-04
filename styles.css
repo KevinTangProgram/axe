@@ -1,0 +1,2249 @@
+/*Thank you Marius for your help!*/
+
+body
+{
+    margin: 0;
+    --nav-load-time: 300ms;
+    --nav-link-load-time: 500ms;
+    background-color: #00001a;
+}
+
+/*Start of wyvern over flame overlay*/
+
+#wyvern
+{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    object-position: 0% 50%;
+}
+
+#flame
+{
+    position: absolute;
+    top: 0px;
+    left: 545px;
+}
+
+/*
+@media only screen and (max-width: 1000px) {
+    #wyvern
+    {
+        display: none;
+    }
+    #flame
+    {
+        display: none;
+    }
+}
+*/
+
+/*End of wyvern over flame overlay*/
+
+/*Start of Alpha Chi Sigma characters*/
+
+.wyvernGrid
+{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+h1{
+    margin-top: 200px;
+    width: 100%;
+    color: white;
+    font-size: 7em;
+    font-family: garamond black;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    animation-delay: 0.5s;
+    animation-duration: var(--nav-load-time);
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-name: slideInLarge;
+}
+
+@media only screen and (max-width: 900px) {
+    #wyvern
+    {
+        display: none;
+    }
+    .wyvernGrid
+    {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    h1
+    {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    h1
+    {
+        margin-top: 100px;
+    }
+}
+
+/*
+h1
+{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 7em;
+    font-family: garamond black;
+}
+
+
+
+#sigma
+{
+    top: 60%;
+}
+
+@media only screen and (max-width: 1130px) {
+    h1
+    {
+        top: 100px;
+        position: relative;
+        transform: none;
+        font-size: 5em;
+        bottom: 0px;
+    }
+    #sigma
+    {
+        top: 0%;
+    }
+}
+
+
+h1 span
+{
+    display: inline-block;
+    animation: flipCharacters 1s linear forwards;
+}
+
+h1 span:nth-child(1)
+{
+    opacity: 0;
+    animation-delay: 0.75s;
+}
+
+h1 span:nth-child(2)
+{
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+h1 span:nth-child(3)
+{
+    opacity: 0;
+    animation-delay: 1.25s;
+}
+
+h1 span:nth-child(4)
+{
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+
+h1 span:nth-child(5)
+{
+    opacity: 0;
+    animation-delay: 1.75s;
+}
+
+h1 span:nth-child(7)
+{
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+h1 span:nth-child(8)
+{
+    opacity: 0;
+    animation-delay: 2.25s;
+}
+
+h1 span:nth-child(9)
+{
+    opacity: 0;
+    animation-delay: 2.5s;
+}
+
+@keyframes flipCharacters
+{
+    0%
+    {
+        color: orange;
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%
+    {
+        color: white;
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+*/
+
+/*End of Alpha Chi Sigma characters*/
+
+/*Start of Beta Gamma*/
+/*
+h2
+{
+    color: white;
+    text-align: center;
+    animation-delay: 2.75s;
+    animation-duration: var(--nav-load-time);
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-name: slideInLarge;
+}
+
+.smallSize
+{
+    display: none;
+}
+
+@media only screen and (max-width: 1130px) {
+    h2
+    {
+        margin-top: 150px;
+        margin-bottom: 300px;
+        animation-delay: 0s;
+    }
+    .smallSize
+    {
+        display: block;
+    }
+}
+*/
+
+@keyframes slideIn
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideInLarge
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*End of Beta Gamma*/
+
+/*Start of navigation bar */
+
+.navOverlayImage
+{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+}
+
+nav
+{
+    color: white;
+    /*animation: nav-load var(--nav-load-time) ease-in;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul
+{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul1
+{
+    top: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+nav li
+{
+    list-style: none;
+    padding: 10px;
+    margin: 0 10px;
+    animation-fill-mode: forwards;
+}
+
+.toggle-button
+{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.toggle-button .bar
+{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 650px) {
+    .toggle-button
+    {
+        display: flex;
+    }
+
+    nav ul
+    {
+        display: none;
+    }
+
+    nav ul1
+    {
+        display: inline;
+        z-index: 1;
+        background-color: #00001a;
+    }
+}
+
+.loadInMovement
+{
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    transform: scale(0);
+}
+
+nav li:nth-child(1)
+{
+    animation-name: nav-first-link-load;
+    transform: translateY(-1000%);
+}
+
+nav li:nth-child(2)
+{
+    animation-name: nav-middle-link-load;
+    transform: translateY(-1000%);
+}
+
+nav li:nth-child(3)
+{
+    animation-name: nav-middle-link-load;
+    transform: translateY(-1000%);
+}
+
+nav li:nth-child(4)
+{
+    animation-name: nav-middle-link-load;
+    transform: translateY(-1000%);
+}
+
+nav li:nth-child(5)
+{
+    animation-name: nav-middle-link-load;
+    transform: translateY(-1000%);
+}
+
+nav li:last-child
+{
+    animation-name: nav-last-link-load;
+    transform: translateX(1000%);
+}
+
+nav ul li a
+{
+    text-decoration: none;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+.hover-underline-animation::after 
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover::after 
+{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@keyframes nav-load
+{
+    0%
+    {
+        transform: translateY(-100%)
+    }
+    100%
+    {
+        transform: translateY(0)
+    }
+}
+
+@keyframes nav-first-link-load
+{
+    0%
+    {
+        transform: translateX(-1000%);
+    }
+    90%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+
+@keyframes nav-middle-link-load
+{
+    0%
+    {
+        transform: scale(0);
+    }
+    90%
+    {
+        transform: scale(1.1);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes nav-last-link-load
+{
+    0%
+    {
+        transform: translateX(1000%);
+    }
+    90%
+    {
+        transform: translateX(50%);
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+/*End of naviagation bar */
+
+/*Start of BSA*/
+h3
+{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.bsaGrid
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-name: slideIn;
+    align-content: center;
+}
+
+.hidden
+{
+    display: none;
+}
+
+/* Wrap entire styles css inside below for each mobile screen you want to support */
+.bsa
+{
+    margin-top: 0%;
+    text-align: center;
+    margin: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1130px) {
+    .bsaGrid
+    {
+        grid-template-columns: 100%;
+    }
+    .hidden
+    {
+        display: block;
+    }
+    .unhidden
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .bsa
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+#bsaTop
+{
+    margin-top: 170px;
+}
+
+p4
+{
+    color: white;
+    font-size: 2 rem;
+}
+#shiftRight
+{
+    margin-left: 45.25%;
+}
+
+h4
+{
+    color: white;
+    font-size: 3rem;
+    margin-top: 0%;
+}
+
+#bsaExtraBottomSpace
+{
+    margin-bottom: 0%;
+}
+
+h20
+{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    left: 20%;
+    right: 20%;
+    top: 5%;
+    bottom: 0%;
+}
+
+@media only screen and (max-width: 1400px) {
+    #bsaTop
+    {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #bsaTop
+    {
+        margin-top: 250px;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    #bsaTop
+    {
+        margin-top: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #bsaTop
+    {
+        margin-top: 350px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #bsaTop
+    {
+        margin-top: 500px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #bsaTop
+    {
+        margin-top: 550px;
+    }
+}
+/*End of BSA*/
+
+/*Start of History and Activities*/
+.historyAndActivityGrid
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 72.5px;
+    margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 1250px) {
+    .historyAndActivityGrid
+    {
+        grid-template-columns: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 675px) {
+    .shrinkSize
+    {
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .shrinkSize
+    {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .shrinkSize
+    {
+        width: 250px;
+        height: auto;
+    }
+}
+  
+.historyAndActivity
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+h5
+{
+    margin-top: 1em;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+h6
+{
+    margin-top: 0%;
+    color: white;
+    font-size: large;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-name: slideInLarge;
+}
+
+h6 a:link
+{
+    text-decoration: none;
+}
+
+@keyframes learnSlideIn
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(300%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.learnMoreOutline
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.learnMoreBox
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0rem;
+    padding: 1rem;
+}
+
+.hover-highlight-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+.hover-highlight-animation::after 
+{
+    content: '';
+    padding-top: 17px;
+    padding-left: 0%;
+    color: black;
+    position: absolute;
+    width: 127px;
+    transform: scaleY(0);
+    height: 37px;
+    bottom: -17px;
+    left: -17px;
+    background-color: white;
+    transform-origin: top;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-highlight-animation:hover::after 
+{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    content: 'Learn More';
+}
+
+.hover-highlight-animation1 {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+.hover-highlight-animation1::after 
+{
+    content: '';
+    padding-top: 17px;
+    padding-left: 17px;
+    color: black;
+    position: absolute;
+    width: 109px;
+    transform: scaleY(0);
+    height: 37px;
+    bottom: -17px;
+    left: -17px;
+    background-color: white;
+    transform-origin: top;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-highlight-animation1:hover::after 
+{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    content: 'Learn More';
+}
+
+/*End of History and Activities*/
+
+/*Start of Socials*/
+h7
+{
+    color: white;
+    font-size: small;
+}
+
+.socialMediaPosition
+{
+    padding-bottom: 3%;
+}
+
+.socialMediaGrid
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 2em;
+}
+
+#socialMediaGridExtraMediumSpace
+{
+    margin-top: 100px;
+}
+
+#socialMediaGridExtraSpace
+{
+    margin-top: 36px;
+}
+
+#socialMediaGridExtraExtraSpace
+{
+    margin-top: 145px;
+}
+
+.socialMedia1
+{
+    /*padding-left: 86.5%;*/
+    margin-left: auto;
+    margin-right: 2em;
+}
+
+.socialMedia2
+{
+    margin-left: 2em;
+    margin-right: auto;
+}
+
+h7 a:link
+{
+    text-decoration: none;
+}
+/*End of Socials*/
+
+/*Start of History and Activities Page*/
+
+.whiteLink
+{
+    color: white;
+    font-weight: bold;
+}
+
+.backLinkHome
+{
+    position: absolute;
+    top: 0.8em;
+    left: 13em;
+    z-index: 1;
+}
+
+#backLinkHomeObjects
+{
+    left: 2em;
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .backLinkHome
+    {
+        left: 2em;
+    }
+}
+
+@media only screen and (max-width: 900px)
+{
+    .backLinkHome
+    {
+        display: none;
+    }
+}
+
+.imageLoad
+{
+    width: 80%;
+    height: 725px;
+    object-fit: cover;
+    margin-left: 10%;
+    animation: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    margin-bottom: 21.75px;
+}
+
+#founder
+{
+    height: auto;
+    object-position: 50% 42%;
+}
+
+#EYU
+{
+    object-position: 50% 39%;
+}
+
+#EYU1
+{
+    object-position: 50% 30%;
+}
+
+#EYU2
+{
+    object-position: 50% 39%;
+}
+
+h8
+{
+    color: white;
+    font-size: 3rem;
+}
+
+.tenPercentIndent
+{
+    margin-left: 10%;
+}
+
+.alignCenter
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paragraphContainer
+{
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 1em;
+}
+
+p8
+{
+    font-size: large;
+    animation-name: slideInLarge;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+.whiteText
+{
+    color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.noIndent
+{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.faqButton
+{
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 0px;
+    border-color: transparent;
+    width: 100%;
+    text-align: left;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 98% 2%;
+}
+
+.faqButton:hover{
+    background-color: white;
+    color: black;
+}
+
+.faqContainer
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.imageLoadContainer
+{
+    width: 80%;
+    height: 725px;
+    margin-left: 10%;
+    margin-bottom: 21.75px;
+    position: absolute;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 325px;
+    width: auto;
+    margin-left: 0;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 2;
+}
+
+#prevPosition
+{
+    margin-left: -83%;
+    margin-top: 580px;
+}
+
+#nextPosition
+{
+    margin-left: -40%;
+    margin-top: 580px;
+}
+
+.next {
+    right: 0;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .prev:hover, .next:hover {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    #EYU2
+    {
+        object-position: 65% 39%;
+    }
+}
+
+
+@media only screen and (max-width: 1100px)
+{
+    #prevPosition
+    {
+        margin-left: -85%;
+    }
+    .prev:hover, .next:hover {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    #prevPosition
+    {
+        margin-left: -87%;
+    }
+}
+
+@media only screen and (max-width: 550px)
+{
+    #prevPosition
+    {
+        margin-left: -90%;
+    }
+}
+
+@media only screen and (max-width: 350px)
+{
+    #prevPosition
+    {
+        margin-left: -93%;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    #nextPosition
+    {
+        margin-left: 0%;
+    }
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+  /* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+  
+  /* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.activitiesWhitespace
+{
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 1300px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 250px;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 50px;
+    }
+
+    p8
+    {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 550px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 150px;
+    }
+    h8
+    {
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 250px;
+    }
+}
+
+@media only screen and (max-width: 340px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 300px;
+    }
+}
+
+@media only screen and (max-width: 310px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 350px;
+    }
+}
+
+@media only screen and (max-width: 290px)
+{
+    .activitiesWhitespace
+    {
+        margin-top: 400px;
+    }
+}
+/*End of History and Activities Page*/
+
+/*Start of Rush Page */
+
+#grego
+{
+    width: 80%;
+    object-position: 50% 42%;
+    margin-left: 10%;
+    margin-bottom: 21.75px;
+}
+
+#rushJoinUs
+{
+    top: 30%;
+    position: absolute;
+    animation-name: slideInLarge;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    text-align: center;
+}
+
+.textAlignCenter
+{
+    width: 100%;
+    text-align: center;
+}
+
+h9
+{
+    color: white;
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+p9
+{
+    color: white;
+    font-size: large;
+}
+
+@media only screen and (max-width: 900px)
+{
+
+    #grego
+    {
+        object-position: 75% 42%;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    p8
+    {
+        margin-right: 10%;
+    }
+}
+
+@keyframes fadeInSlow
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+h10
+{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+h11
+{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.rushCalendarGrid
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media only screen and (max-width: 850px)
+{
+    .rushCalendarGrid
+    {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    .rushCalendarGrid
+    {
+        grid-template-columns: 100%;
+    }
+}
+
+.rushCalendar
+{
+    margin-bottom: 5em;
+    color: white;
+    text-align: center;
+}
+
+.linkContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h12
+{
+    font-size: 1.5rem;
+}
+/*End of Rush Page*/
+
+/*Start of People Page*/
+
+.backLinkPeople
+{
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 1;
+}
+
+#membersOfTheChemicalProfession
+{
+    top: 253.75px;
+    text-align: center;
+}
+
+.imageLoadDelay
+{
+    position: relative;
+    width: 100%;
+    height: 725px;
+    object-fit: cover;
+    animation: fadeInSlow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.absolutePosition
+{
+    position: absolute;
+}
+
+#AXSMembers
+{
+    margin-top: 0%;
+    object-position: 50% 67%;
+}
+
+#undergraduateMembers
+{
+    object-position: 50% 50%;
+    margin-top: 725px;
+}
+
+#undergraduateMembersPage
+{
+    object-position: 50% 50%;
+    margin-bottom: 21.75px;
+}
+
+#pledgeClass
+{
+    object-position: 50% 30%;
+    margin-top: 1450px;
+}
+
+#pledgeClassPage
+{
+    object-position: 50% 30%;
+    margin-bottom: 21.75px;
+}
+
+#professorMembers
+{
+    object-position: 50% 30%;
+    margin-top: 2175px;
+}
+
+#professorMembersPage
+{
+    object-position: 50% 30%;
+    margin-bottom: 21.75px;
+}
+
+#alumniMembers
+{
+    object-position: 50% 90%;
+    margin-top: 2900px;
+    margin-bottom: 2em;
+}
+
+#alumniMembersPage
+{
+    object-position: 50% 90%;
+    margin-top: 0%;
+    margin-bottom: 21.75px;
+}
+
+#tree
+{
+    object-position: 50% 75%;
+    margin-top: 3625px;
+}
+
+#treePage
+{
+    object-position: 50% 75%;
+    margin-top: 0%;
+    margin-bottom: 21.75px;
+}
+
+
+.imageTitleContainer
+{
+    position: absolute;
+    animation-name: slideInLarge;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    width: 100%;
+}
+
+.imageTitle
+{
+    position: absolute;
+    animation-name: slideInLarge;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+#undergraduateMembersTitle
+{
+    left: 62%;
+    top: 1029.5px;
+}
+
+#pledgeClassTitle
+{
+    left: 76%;
+    top: 1740px;
+}
+
+#professorMembersTitle
+{
+    left: 13%;
+    top: 2565px;
+}
+
+#alumniMembersTitle
+{
+    left: 13.5%;
+    top: 3240.75px;
+}
+
+#treeTitle
+{
+    left: 70%;
+    top: 4000px;
+}
+
+.learnMorePosition
+{
+    position: absolute;
+    animation-name: slideInLarge;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    text-align: center;
+    top: 150%;
+}
+
+#undergraduateMembersLearnMore
+{
+    left: 45%;
+}
+
+#pledgeClassLearnMore
+{
+    left: 5%;
+}
+
+#professorMembersLearnMore
+{
+    left: 45%;
+}
+
+#alumniMembersLearnMore
+{
+    left: 10%;
+}
+
+#treeLearnMore
+{
+    left: 5%;
+}
+
+.peopleContainer
+{
+    width: 100%;
+}
+
+.peopleFlex
+{
+    display: flex;
+}
+
+.peopleTop
+{
+    position: absolute;
+    margin-top: 4375px;
+}
+
+h13
+{
+    color: white;
+    font-size: 2rem;
+}
+
+h14
+{
+    color: white;
+    font-size: 3rem;
+    /* margin-left: 39%; */
+    width: 100%;
+    text-align: center;
+}
+
+h15
+{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p14
+{
+    color: white;
+    text-align: center;
+}
+
+.memberGrid
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -7.25px;
+}
+
+@media only screen and (max-width: 1300px) 
+{
+    .memberGrid
+    {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    .memberGrid
+    {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) 
+{
+    .memberGrid
+    {
+        grid-template-columns: 100%;
+    }
+}
+
+.member
+{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.nameGrid
+{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 14.5px;
+    margin-bottom: 36.25px;
+}
+
+.spacer
+{
+    margin-top: 70px;
+}
+
+#nameGridLessSpace2
+{
+    margin-top: -40px;
+}
+
+.nameGrid2
+{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+@media only screen and (max-width: 1360px) 
+{
+    .nameGrid
+    {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+@media only screen and (max-width: 1100px) 
+{
+    .nameGrid
+    {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media only screen and (max-width: 830px) 
+{
+    .nameGrid
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 575px) 
+{
+    .nameGrid
+    {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+#nameGridLessSpace
+{
+    margin-bottom: 20px;
+}
+
+.name
+{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#professorParagraph
+{
+    text-align: left;
+    margin-left: 13%;
+}
+
+.centerAll {
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1300px) 
+{
+    #membersOfTheChemicalProfession
+    {
+        top: 304.5px;
+    }
+    h9
+    {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 900px) 
+{
+    #membersOfTheChemicalProfession
+    {
+        top: 304.5px;
+    }
+    #undergraduateMembersTitle
+    {
+        left: 10%;
+    }
+    #pledgeClassTitle
+    {
+        left: 10%;
+    }
+    #treeTitle
+    {
+        left: 10%;
+    }
+}
+/*
+@media only screen and (max-height: 650px) 
+{
+    #membersOfTheChemicalProfession
+    {
+        top: 30%;
+    }
+    #undergraduateMembersTitle
+    {
+        top: 150%;
+    }
+
+    #pledgeClassTitle
+    {
+        top: 270%;
+    }
+
+    #professorMembersTitle
+    {
+        top: 400%;
+    }
+
+    #alumniMembersTitle
+    {
+        top: 500%;
+    }
+}
+
+@media only screen and (max-height: 200px) 
+{
+    #membersOfTheChemicalProfession
+    {
+        top: 100%;
+    }
+    #undergraduateMembersTitle
+    {
+        top: 500%;
+    }
+
+    #pledgeClassTitle
+    {
+        top: 850%;
+    }
+
+    #professorMembersTitle
+    {
+        top: 1300%;
+    }
+
+    #alumniMembersTitle
+    {
+        top: 1600%;
+    }
+}
+*/
+
+/*End of People Page*/
+
+/*Start of Contact Page*/
+
+.contactUsGrid
+{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    margin-top: 36.25px;
+}
+
+@media only screen and (max-width: 900px) 
+{
+    .contactUsGrid
+    {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 36.5px;
+    }
+    .contactUs1
+    {
+        text-align: center;
+        margin-right: 21%;
+        margin-top: 43.5px;
+        animation-duration: var(--nav-link-load-time);
+        animation-timing-function: ease-in;
+        animation-name: slideInRight;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+    }
+    .contactUs3
+    {
+        padding-left: 50%;
+        animation-duration: var(--nav-link-load-time);
+        animation-timing-function: ease-in;
+        animation-name: slideInLeft;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+    }
+
+}
+
+.contactUs1
+{
+    text-align: center;
+    margin-left: 22%;
+    margin-top: 43.5px;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-name: slideInRight;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight
+{
+    0%
+    {
+        transform: translateX(-50%);
+    }
+    90%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+
+.contactUs2
+{
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    animation-name: slideIn;
+}
+
+.contactUs3
+{
+    text-align: left;
+    margin-top: 72.5px;
+    margin-left: -20%;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-name: slideInLeft;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft
+{
+    0%
+    {
+        transform: translateX(50%);
+    }
+    90%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+
+.businessHoursGrid
+{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    text-align: left;
+}
+
+
+h16
+{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+h17
+{
+    color: white;
+    font-size: 1.25rem;
+}
+
+h19
+{
+    color: white;
+    font-size: 2rem;
+}
+
+p17
+{
+    color: white;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
+.officerPositionGrid
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin-top: 36.25px;
+}
+
+@media only screen and (max-width: 1060px) 
+{
+    .officerPositionGrid
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        margin-top: 36.25px;
+    }
+} 
+
+@media only screen and (max-width: 700px) 
+{
+    .officerPositionGrid
+    {
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+        margin-top: 36.25px;
+    }
+}
+
+.officerPosition
+{
+    margin-bottom: 145px;
+}
+
+h18
+{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p18
+{
+    color: white;
+}
+
+.mapGrid
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.mapSize
+{
+    width: 400px;
+    height: 250px;
+}
+
+@media only screen and (max-width: 900px) 
+{
+    .mapGrid
+    {
+        grid-template-columns: 100%;
+    }
+    .mapDistance
+    {
+        margin-bottom: 5em;
+    }
+}
+
+@media only screen and (max-width: 450px) 
+{
+    .mapSize
+    {
+        width: 250px;
+    }
+}
+
+/*End of Contact Page*/
+
+/*Start of Tree Page*/
+
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid white;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: white;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+
+/*Thats all. I hope you enjoyed it.
+Thanks :)*/
+
+.block
+{
+    width: 1900px;
+    margin-bottom: 0em;
+}
+
+.aresBlock
+{
+    width: 5000px;
+    margin-bottom: 55em;
+}
+
+.royalBlock
+{
+    width: 3500px;
+    margin-bottom: 75em;
+}
+
+.princessBlock
+{
+    width: 2500px;
+    margin-bottom: 55em;
+}
+
+.blackLink
+{
+    color: black;
+    font-weight: bold;
+}
+
+.seleneBlock
+{
+    width: 7000px;
+    margin-bottom: 60em;
+}
+
+.familyGrid
+{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 2em;
+}
+
+.smallGap
+{
+    margin-bottom: 1em;
+}
+
+.largeLetters
+{
+    font-size: 1.5em;
+}
+
+/*End of Tree Page*/
