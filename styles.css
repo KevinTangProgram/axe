@@ -6,6 +6,7 @@ body
     --nav-load-time: 300ms;
     --nav-link-load-time: 500ms;
     background-color: #00001a;
+    /* background-color: beige; */
 }
 
 /*Start of wyvern over flame overlay*/
@@ -2245,6 +2246,48 @@ Thanks :)*/
 .largeLetters
 {
     font-size: 1.5em;
+}
+
+.hide {
+    display: none;
+}
+
+
+.claire{
+    position: absolute;
+    margin-top: 341.7px;
+    margin-left: 411px;
+    border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: transparent;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+    cursor: pointer;
+}
+
+.claire:hover
+{
+    background: #c8e4f8;
+    color: black;
+    border: 1px solid #94a0b4;
+}
+
+      
+.claire:hover + .hide {
+    display: block;
+    position: absolute;
+    border: 1px solid #ccc;
+    margin-left: 530px;
+    margin-top: 330px;
 }
 
 /*End of Tree Page*/
