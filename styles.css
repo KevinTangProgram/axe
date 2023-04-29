@@ -21,12 +21,16 @@ body
 
 #flame
 {
-    position: absolute;
     top: 0px;
     left: 545px;
+    width: 100%;
 }
 
-/*
+video
+{
+    width: 100%;
+}
+
 @media only screen and (max-width: 1000px) {
     #wyvern
     {
@@ -37,7 +41,6 @@ body
         display: none;
     }
 }
-*/
 
 /*End of wyvern over flame overlay*/
 
@@ -49,6 +52,7 @@ body
     grid-template-columns: 40% 60%;
 }
 
+
 h1{
     margin-top: 200px;
     width: 100%;
@@ -59,15 +63,11 @@ h1{
 }
 
 h2{
+    margin-top: 50px;
     color: white;
     text-align: center;
-    animation-delay: 0.5s;
-    animation-duration: var(--nav-load-time);
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    transform: scale(0);
-    animation-name: slideInLarge;
 }
+
 
 @media only screen and (max-width: 900px) {
     #wyvern
@@ -103,7 +103,7 @@ h1
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    width: 100%;
+    width: 60%;
     text-align: center;
     color: white;
     font-size: 7em;
@@ -209,6 +209,7 @@ h1 span:nth-child(9)
 /*End of Alpha Chi Sigma characters*/
 
 /*Start of Beta Gamma*/
+
 /*
 h2
 {
@@ -239,7 +240,6 @@ h2
         display: block;
     }
 }
-*/
 
 @keyframes slideIn
 {
@@ -268,6 +268,7 @@ h2
         transform: translateY(0%);
     }
 }
+*/
 
 /*End of Beta Gamma*/
 
@@ -508,7 +509,7 @@ h3
     animation-duration: var(--nav-link-load-time);
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-    transform: scale(0);
+    /* transform: scale(0); */
     animation-name: slideIn;
     align-content: center;
 }
@@ -554,17 +555,13 @@ h3
 
 #bsaTop
 {
-    margin-top: 170px;
+    margin-top: 30px;
 }
 
 p4
 {
     color: white;
     font-size: 2 rem;
-}
-#shiftRight
-{
-    margin-left: 45.25%;
 }
 
 h4
@@ -581,16 +578,16 @@ h4
 
 h20
 {
-    position: absolute;
     color: white;
     font-size: 2rem;
     text-align: center;
-    left: 20%;
-    right: 20%;
-    top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
     bottom: 0%;
 }
 
+/*
 @media only screen and (max-width: 1400px) {
     #bsaTop
     {
@@ -632,6 +629,7 @@ h20
         margin-top: 550px;
     }
 }
+*/
 /*End of BSA*/
 
 /*Start of History and Activities*/
@@ -721,6 +719,13 @@ h6 a:link
     }
 }
 
+.learnMoreContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .learnMoreOutline
 {
     display: flex;
@@ -751,14 +756,14 @@ h6 a:link
 {
     content: '';
     padding-top: 17px;
-    padding-left: 0%;
     color: black;
     position: absolute;
-    width: 127px;
+    width: 101%;
     transform: scaleY(0);
     height: 37px;
-    bottom: -17px;
-    left: -17px;
+    margin-top: -17px;
+    text-align: center;
+    margin-left: calc(-100% + 15px);
     background-color: white;
     transform-origin: top;
     transition: transform 0.25s ease-out;
@@ -779,16 +784,17 @@ h6 a:link
   
 .hover-highlight-animation1::after 
 {
+    cursor: pointer;
     content: '';
     padding-top: 17px;
-    padding-left: 17px;
     color: black;
     position: absolute;
-    width: 109px;
+    width: 100%;
     transform: scaleY(0);
-    height: 37px;
-    bottom: -17px;
-    left: -17px;
+    height: 35px;
+    margin-top: -17px;
+    text-align: center;
+    margin-left: calc(-100% + 16px);
     background-color: white;
     transform-origin: top;
     transition: transform 0.25s ease-out;
@@ -799,6 +805,11 @@ h6 a:link
     transform: scaleY(1);
     transform-origin: bottom;
     content: 'Learn More';
+}
+
+.whiteLetters
+{
+    color: white;
 }
 
 /*End of History and Activities*/
@@ -931,11 +942,6 @@ h8
 {
     color: white;
     font-size: 3rem;
-}
-
-.tenPercentIndent
-{
-    margin-left: 10%;
 }
 
 .alignCenter
@@ -1973,7 +1979,7 @@ p14
 .businessHoursGrid
 {
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 16% 84%;
     text-align: left;
 }
 
@@ -2011,7 +2017,7 @@ a:link
 .officerPositionGrid
 {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 34% 33%;
     text-align: center;
     margin-top: 36.25px;
 }
@@ -2178,6 +2184,10 @@ right connector from last child*/
 	-moz-transition: all 0.5s;
 }
 
+.tree li a:last-child{
+    margin-bottom: 3em;
+}
+
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
 .tree li a:hover, .tree li a:hover+ul li a {
@@ -2196,26 +2206,22 @@ Thanks :)*/
 
 .block
 {
-    width: 1900px;
-    margin-bottom: 0em;
+    width: 2100px;
 }
 
 .aresBlock
 {
-    width: 5000px;
-    margin-bottom: 55em;
+    width: 6100px;
 }
 
 .royalBlock
 {
     width: 3500px;
-    margin-bottom: 75em;
 }
 
 .princessBlock
 {
     width: 2500px;
-    margin-bottom: 55em;
 }
 
 .blackLink
@@ -2226,8 +2232,7 @@ Thanks :)*/
 
 .seleneBlock
 {
-    width: 7000px;
-    margin-bottom: 60em;
+    width: 7300px;
 }
 
 .familyGrid
@@ -2255,39 +2260,16 @@ Thanks :)*/
 
 .claire{
     position: absolute;
-    margin-top: 341.7px;
-    margin-left: 411px;
-    border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: transparent;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-    cursor: pointer;
-}
-
-.claire:hover
-{
-    background: #c8e4f8;
-    color: black;
-    border: 1px solid #94a0b4;
-}
-
-      
-.claire:hover + .hide {
-    display: block;
-    position: absolute;
-    border: 1px solid #ccc;
-    margin-left: 530px;
     margin-top: 330px;
+    margin-left: 200px;
+    border: 1px solid #ccc;
+	border-radius: 5px;
+    height: 266.67px;
+}
+
+.picture
+{
+    border-radius: 5px;
 }
 
 /*End of Tree Page*/
