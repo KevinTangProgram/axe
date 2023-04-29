@@ -240,6 +240,7 @@ h2
         display: block;
     }
 }
+*/
 
 @keyframes slideIn
 {
@@ -254,6 +255,7 @@ h2
         transform: translateY(0%);
     }
 }
+
 
 @keyframes slideInLarge
 {
