@@ -67,20 +67,6 @@ h2{
     text-align: center;
 } */
 
-
-
-@media only screen and (max-width: 900px) {
-    #wyvern
-    {
-        display: none;
-    }
-    .wyvernGrid
-    {
-        grid-template-columns: 100%;
-        margin-bottom: 500px;
-    }
-}
-
 @media only screen and (max-width: 550px) {
     h1
     {
@@ -114,6 +100,22 @@ h1
     position: absolute;
     width: 60%;
     margin-top: 200px;
+}
+
+@media only screen and (max-width: 900px) {
+    #wyvern
+    {
+        display: none;
+    }
+    .wyvernGrid
+    {
+        grid-template-columns: 100%;
+        margin-bottom: 500px;
+    }
+    .flipNameCharacters
+    {
+        display: none;
+    }
 }
 
 #sigma
@@ -227,10 +229,7 @@ h2
     animation-name: slideInLarge;
 }
 
-.smallSize
-{
-    display: none;
-}
+
 
 @media only screen and (max-width: 1200px) {
     h2
@@ -278,14 +277,13 @@ h2
 .smallerContainerTitle
 {
     display: none;
+    width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
     .smallerContainerTitle
     {
         display: flex;
-        text-align: center;
-        width: 100%;
     }
 }
 
