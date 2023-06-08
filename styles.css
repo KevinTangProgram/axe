@@ -16,13 +16,12 @@ body
     position: relative;
     max-width: 100%;
     max-height: 100%;
-    object-position: 0% 50%;
+    /* object-position: 0% 50%; */
 }
 
 #flame
 {
     top: 0px;
-    left: 545px;
     width: 100%;
 }
 
@@ -31,7 +30,7 @@ video
     width: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
     #wyvern
     {
         display: none;
@@ -52,7 +51,7 @@ video
     grid-template-columns: 40% 60%;
 }
 
-
+/* 
 h1{
     margin-top: 200px;
     width: 100%;
@@ -66,7 +65,8 @@ h2{
     margin-top: 50px;
     color: white;
     text-align: center;
-}
+} */
+
 
 
 @media only screen and (max-width: 900px) {
@@ -95,29 +95,33 @@ h2{
     }
 }
 
-/*
 h1
 {
     margin: 0px;
     padding: 0px;
-    position: absolute;
-    top: 40%;
     transform: translateY(-50%);
-    width: 60%;
     text-align: center;
     color: white;
     font-size: 7em;
     font-family: garamond black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
+.flipNameCharacters
+{
+    position: absolute;
+    width: 60%;
+    margin-top: 200px;
+}
 
 #sigma
 {
-    top: 60%;
+    top: 55%;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 900px) {
     h1
     {
         top: 100px;
@@ -204,13 +208,13 @@ h1 span:nth-child(9)
         filter: blur(0);
     }
 }
-*/
+
 
 /*End of Alpha Chi Sigma characters*/
 
 /*Start of Beta Gamma*/
 
-/*
+
 h2
 {
     color: white;
@@ -228,10 +232,10 @@ h2
     display: none;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1200px) {
     h2
     {
-        margin-top: 150px;
+        margin-top: 100px;
         margin-bottom: 300px;
         animation-delay: 0s;
     }
@@ -240,7 +244,7 @@ h2
         display: block;
     }
 }
-*/
+
 
 @keyframes slideIn
 {
@@ -270,7 +274,22 @@ h2
         transform: translateY(0%);
     }
 }
-*/
+
+.smallerContainerTitle
+{
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .smallerContainerTitle
+    {
+        display: flex;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
 
 /*End of Beta Gamma*/
 
@@ -909,7 +928,7 @@ h7 a:link
 .imageLoad
 {
     width: 80%;
-    height: 725px;
+    height: 100vh;
     object-fit: cover;
     margin-left: 10%;
     animation: fadeIn;
@@ -1037,7 +1056,7 @@ p8
 .imageLoadContainer
 {
     width: 80%;
-    height: 725px;
+    height: 100vh;
     margin-left: 10%;
     margin-bottom: 21.75px;
     position: absolute;
@@ -1303,7 +1322,7 @@ background-color: #717171;
 
 #rushJoinUs
 {
-    top: 30%;
+    top: 30vh;
     position: absolute;
     animation-name: slideInLarge;
     animation-duration: 1s;
@@ -1423,6 +1442,15 @@ h12
 
 /*Start of People Page*/
 
+.scrollme {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 30px;
+    height: 20px;
+    margin: 0 0 0 -15px;
+}
+
 .backLinkPeople
 {
     color: white;
@@ -1434,7 +1462,7 @@ h12
 
 #membersOfTheChemicalProfession
 {
-    top: 253.75px;
+    top: 37vh;
     text-align: center;
 }
 
@@ -1442,7 +1470,9 @@ h12
 {
     position: relative;
     width: 100%;
-    height: 725px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
     animation: fadeInSlow;
     animation-duration: 2s;
@@ -1463,7 +1493,7 @@ h12
 #undergraduateMembers
 {
     object-position: 50% 50%;
-    margin-top: 725px;
+    margin-top: 100vh;
 }
 
 #undergraduateMembersPage
@@ -1474,20 +1504,20 @@ h12
 
 #pledgeClass
 {
-    object-position: 50% 30%;
-    margin-top: 1450px;
+    object-position: 50% 80%;
+    margin-top: 200vh;
 }
 
 #pledgeClassPage
 {
-    object-position: 50% 30%;
+    object-position: 50% 65%;
     margin-bottom: 21.75px;
 }
 
 #professorMembers
 {
     object-position: 50% 30%;
-    margin-top: 2175px;
+    margin-top: 300vh;
 }
 
 #professorMembersPage
@@ -1499,8 +1529,7 @@ h12
 #alumniMembers
 {
     object-position: 50% 90%;
-    margin-top: 2900px;
-    margin-bottom: 2em;
+    margin-top: 400vh;
 }
 
 #alumniMembersPage
@@ -1513,7 +1542,7 @@ h12
 #tree
 {
     object-position: 50% 75%;
-    margin-top: 3625px;
+    margin-top: 500vh;
 }
 
 #treePage
@@ -1546,31 +1575,31 @@ h12
 #undergraduateMembersTitle
 {
     left: 62%;
-    top: 1029.5px;
+    top: 142vh;
 }
 
 #pledgeClassTitle
 {
-    left: 76%;
-    top: 1740px;
+    left: 70%;
+    top: 247vh;
 }
 
 #professorMembersTitle
 {
     left: 13%;
-    top: 2565px;
+    top: 355vh;
 }
 
 #alumniMembersTitle
 {
     left: 13.5%;
-    top: 3240.75px;
+    top: 445vh;
 }
 
 #treeTitle
 {
     left: 70%;
-    top: 4000px;
+    top: 553vh;
 }
 
 .learnMorePosition
@@ -1622,7 +1651,7 @@ h12
 .peopleTop
 {
     position: absolute;
-    margin-top: 4375px;
+    margin-top: 605vh;
 }
 
 h13
@@ -2206,35 +2235,29 @@ right connector from last child*/
 /*Thats all. I hope you enjoyed it.
 Thanks :)*/
 
-.block
+.tree li a div:hover, .tree li a:hover+ul li a div
 {
-    width: 2100px;
+    animation-duration: 0.5s;
+    animation-name: backgroundChange;
+    animation-fill-mode: forwards;
 }
 
-.aresBlock
+@keyframes backgroundChange
 {
-    width: 6100px;
-}
-
-.royalBlock
-{
-    width: 3500px;
-}
-
-.princessBlock
-{
-    width: 2500px;
+    0%
+    {
+        background: transparent;
+    }
+    100%
+    {
+        background: rgb(255, 227, 68);
+    }
 }
 
 .blackLink
 {
     color: black;
     font-weight: bold;
-}
-
-.seleneBlock
-{
-    width: 7300px;
 }
 
 .familyGrid
@@ -2259,19 +2282,273 @@ Thanks :)*/
     display: none;
 }
 
-
-.claire{
-    position: absolute;
-    margin-top: 330px;
-    margin-left: 200px;
-    border: 1px solid #ccc;
-	border-radius: 5px;
-    height: 266.67px;
-}
-
 .picture
 {
     border-radius: 5px;
 }
 
 /*End of Tree Page*/
+
+@keyframes firework {
+    0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
+    50% { width: 0.5vmin; opacity: 1; }
+    100% { width: var(--finalSize); opacity: 0; }
+  }
+  
+  /* @keyframes fireworkPseudo {
+    0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
+    50% { width: 0.5vmin; opacity: 1; }
+    100% { width: var(--finalSize); opacity: 0; }
+  }
+   */
+  .firework,
+  .firework::before,
+  .firework::after
+  {
+    --initialSize: 0.5vmin;
+    --finalSize: 45vmin;
+    --particleSize: 0.2vmin;
+    --color1: yellow;
+    --color2: khaki;
+    --color3: white;
+    --color4: lime;
+    --color5: gold;
+    --color6: mediumseagreen;
+    --y: -30vmin;
+    --x: -50%;
+    --initialY: 60vmin;
+    content: "";
+    animation: firework 3s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, var(--y));
+    width: var(--initialSize);
+    aspect-ratio: 1;
+    background: 
+      /*
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 0%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 0%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 100%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 100%,
+      */
+      
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 50% 0%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%,
+      
+      /* bottom right */
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%,
+      
+      /* bottom left */
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%,
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%,
+      
+      /* top left */
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%,
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%,
+      
+      /* top right */
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42%
+      ;
+    background-size: var(--initialSize) var(--initialSize);
+    background-repeat: no-repeat;
+  }
+  
+  .firework::before {
+    --x: -50%;
+    --y: -50%;
+    --initialY: -50%;
+  /*   transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg); */
+    transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+  /*   animation: fireworkPseudo 2s infinite; */
+  }
+  
+  .firework::after {
+    --x: -50%;
+    --y: -50%;
+    --initialY: -50%;
+  /*   transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg); */
+    transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+  /*   animation: fireworkPseudo 2s infinite; */
+  }
+  
+  .firework:nth-child(2) {
+    --x: 30vmin;
+  }
+  
+  .firework:nth-child(2),
+  .firework:nth-child(2)::before,
+  .firework:nth-child(2)::after {
+    --color1: pink;
+    --color2: violet;
+    --color3: fuchsia;
+    --color4: orchid;
+    --color5: plum;
+    --color6: lavender;  
+    --finalSize: 40vmin;
+    left: 30%;
+    top: 60%;
+    animation-delay: -0.25s;
+  }
+  
+  .firework:nth-child(3) {
+    --x: -30vmin;
+    --y: -50vmin;
+  }
+  
+  .firework:nth-child(3),
+  .firework:nth-child(3)::before,
+  .firework:nth-child(3)::after {
+    --color1: cyan;
+    --color2: lightcyan;
+    --color3: lightblue;
+    --color4: PaleTurquoise;
+    --color5: SkyBlue;
+    --color6: lavender;
+    --finalSize: 35vmin;
+    left: 70%;
+    top: 60%;
+    animation-delay: -0.4s;
+  }
+
+  .ninja
+  {
+    display: block;
+  }
+
+  /* GLOBAL STYLES */
+  
+/* DEMO-SPECIFIC STYLES */
+.typewriter
+{
+    display: block;
+    padding: 5px 10px;
+}
+
+.typewriter:hover + .hide {
+display: block;
+color: #fff;
+font-family: monospace;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid orange; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .15em; /* Adjust as needed */
+font-size: large;
+width: 39.5em;
+animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+position: absolute;
+margin-top: 50px;
+margin-left: -250px;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 39.5em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    .typewriter:hover + .hide
+    {
+        width: 42.5em;
+    }
+    @keyframes typing {
+    from { width: 0 }
+    to { width: 42.5em }
+    }
+}
+
+.megan
+{
+    display: block;
+    padding: 5px 10px;
+}
+
+.megan:hover + .hide {
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 150px;
+    border: 1px solid #ccc;
+	border-radius: 5px;
+    height: 150px;
+  }
+
+.ben
+{
+    display: block;
+    padding: 5px 10px;
+}
+
+.ben:hover + .hide {
+    display: block;
+    position: absolute;
+    margin-left: -250px;
+    margin-top: -40px;
+    height: 150px;
+}
+
+.connor
+{
+    display: block;
+    padding: 5px 10px;
+}
+
+.connor:hover + .hide {
+    display: block;
+    position: absolute;
+    border: 1px solid #ccc;
+    margin-left: -170px;
+    margin-top: -100px;
+	border-radius: 5px;
+    height: 150px;
+}
+
+.claire
+{
+    display: block;
+    padding: 5px 10px;
+}
+
+.claire:hover + .hide {
+    display: block;
+    position: absolute;
+    border: 1px solid #ccc;
+    margin-left: -220px;
+    margin-top: -30px;
+	border-radius: 5px;
+    height: 266.67px;
+}
